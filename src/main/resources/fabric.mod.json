@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "toggletoggle",
+  "version": "${version}",
+  "name": "ToggleToggle",
+  "description": "Adds a keybind for switching between the \"toggle\" and \"hold\" options for sprinting and sneaking.",
+  "authors": ["sylvxa"],
+  "contact": {
+    "email": "sylvia@sylvie.lol",
+    "homepage": "https://sylvie.lol",
+    "sources": "https://github.com/sylvxa/toggletoggle",
+    "issues": "https://github.com/sylvxa/toggletoggle/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/toggletoggle/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "lol.sylvie.tt.ToggleToggle"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

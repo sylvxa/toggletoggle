@@ -1,0 +1,8 @@
+{
+  "category.toggletoggle.keys": "ToggleToggle",
+  "key.toggletoggle.sprint": "Toggle Sprint",
+  "key.toggletoggle.sneak": "Toggle Sneak",
+  "message.toggletoggle": "%s: %s",
+  "message.toggletoggle.enabled": "Toggle",
+  "message.toggletoggle.disabled": "Hold"
+}
