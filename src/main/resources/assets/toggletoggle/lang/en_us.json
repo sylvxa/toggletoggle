@@ -1,5 +1,5 @@
 {
-  "category.toggletoggle.keys": "ToggleToggle",
+  "key.category.toggletoggle.keys": "ToggleToggle",
   "key.toggletoggle.sprint": "Toggle Sprint",
   "key.toggletoggle.sneak": "Toggle Sneak",
   "message.toggletoggle": "%s: %s",

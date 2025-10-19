@@ -4,12 +4,20 @@
   "version": "${version}",
   "name": "ToggleToggle",
   "description": "Adds a keybind for switching between the \"toggle\" and \"hold\" options for sprinting and sneaking.",
-  "authors": ["sylvxa"],
+  "authors": [
+    {
+      "name": "sylvxa",
+      "contact": {
+        "email": "me@sylvie.lol",
+        "homepage": "https://sylvie.lol"
+      }
+    }
+  ],
   "contact": {
-    "email": "sylvia@sylvie.lol",
-    "homepage": "https://sylvie.lol",
-    "sources": "https://github.com/sylvxa/toggletoggle",
-    "issues": "https://github.com/sylvxa/toggletoggle/issues"
+    "repo": "https://github.com/sylvxa/toggletoggle",
+    "homepage": "https://modrinth.com/project/toggletoggle",
+    "issues": "https://github.com/sylvxa/toggletoggle/issues",
+    "discord": "https://discord.gg/5qzrB98sBA"
   },
   "license": "MIT",
   "icon": "assets/toggletoggle/icon.png",
@@ -22,6 +30,6 @@
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
-    "minecraft": "${minecraft_version}"
+    "minecraft": ">=1.21.9"
   }
 }
