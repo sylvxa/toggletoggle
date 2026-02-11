@@ -14,6 +14,8 @@ import net.minecraft.resources.Identifier;
 public class ToggleToggle implements ClientModInitializer {
     private static KeyMapping sprintKeyBinding;
     private static KeyMapping sneakKeyBinding;
+    private static KeyMapping attackKeyBinding;
+    private static KeyMapping useKeyBinding;
 
     private static final KeyMapping.Category keybindingCategory = KeyMapping.Category.register(Identifier.fromNamespaceAndPath("toggletoggle", "keys"));
 
@@ -42,6 +44,20 @@ public class ToggleToggle implements ClientModInitializer {
                 keybindingCategory
         ));
 
+        attackKeyBinding = KeyBindingHelper.registerKeyBinding(new KeyMapping(
+                "key.toggletoggle.attack",
+                InputConstants.Type.KEYSYM,
+                InputConstants.UNKNOWN.getValue(),
+                keybindingCategory
+        ));
+
+        useKeyBinding = KeyBindingHelper.registerKeyBinding(new KeyMapping(
+                "key.toggletoggle.use",
+                InputConstants.Type.KEYSYM,
+                InputConstants.UNKNOWN.getValue(),
+                keybindingCategory
+        ));
+
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (sprintKeyBinding.consumeClick())
                 toggleOption(client.player, client.options.toggleSprint(), client.options.keySprint);
@@ -49,6 +65,11 @@ public class ToggleToggle implements ClientModInitializer {
             while (sneakKeyBinding.consumeClick())
                 toggleOption(client.player, client.options.toggleCrouch(), client.options.keyShift);
 
+            while (attackKeyBinding.consumeClick())
+                toggleOption(client.player, client.options.toggleAttack(), client.options.keyAttack);
+
+            while (useKeyBinding.consumeClick())
+                toggleOption(client.player, client.options.toggleUse(), client.options.keyUse);
         });
     }
 }

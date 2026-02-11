@@ -3,7 +3,7 @@
   "id": "toggletoggle",
   "version": "${version}",
   "name": "ToggleToggle",
-  "description": "Adds a keybind for switching between the \"toggle\" and \"hold\" options for sprinting and sneaking.",
+  "description": "Adds a keybind for switching between the \"toggle\" and \"hold\" options for sprinting, sneaking, left and right click.",
   "authors": [
     {
       "name": "sylvxa",
