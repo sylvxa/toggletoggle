@@ -3,7 +3,7 @@ package lol.sylvie.tt;
 import com.mojang.blaze3d.platform.InputConstants;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
-import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
+import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.OptionInstance;
@@ -25,33 +25,33 @@ public class ToggleToggle implements ClientModInitializer {
         if (!newValue) keybind.setDown(false);
 
         if (player == null) return;
-        player.displayClientMessage(Component.translatable("message.toggletoggle", option.toString(), Component.translatable(newValue ? "message.toggletoggle.enabled" : "message.toggletoggle.disabled").withStyle(ChatFormatting.YELLOW)), true);
+        player.sendOverlayMessage(Component.translatable("message.toggletoggle", option.toString(), Component.translatable(newValue ? "message.toggletoggle.enabled" : "message.toggletoggle.disabled").withStyle(ChatFormatting.YELLOW)));
     }
 
     @Override
     public void onInitializeClient() {
-        sprintKeyBinding = KeyBindingHelper.registerKeyBinding(new KeyMapping(
+        sprintKeyBinding = KeyMappingHelper.registerKeyMapping(new KeyMapping(
                 "key.toggletoggle.sprint",
                 InputConstants.Type.KEYSYM,
                 InputConstants.UNKNOWN.getValue(),
                 keybindingCategory
         ));
 
-        sneakKeyBinding = KeyBindingHelper.registerKeyBinding(new KeyMapping(
+        sneakKeyBinding = KeyMappingHelper.registerKeyMapping(new KeyMapping(
                 "key.toggletoggle.sneak",
                 InputConstants.Type.KEYSYM,
                 InputConstants.UNKNOWN.getValue(),
                 keybindingCategory
         ));
 
-        attackKeyBinding = KeyBindingHelper.registerKeyBinding(new KeyMapping(
+        attackKeyBinding = KeyMappingHelper.registerKeyMapping(new KeyMapping(
                 "key.toggletoggle.attack",
                 InputConstants.Type.KEYSYM,
                 InputConstants.UNKNOWN.getValue(),
                 keybindingCategory
         ));
 
-        useKeyBinding = KeyBindingHelper.registerKeyBinding(new KeyMapping(
+        useKeyBinding = KeyMappingHelper.registerKeyMapping(new KeyMapping(
                 "key.toggletoggle.use",
                 InputConstants.Type.KEYSYM,
                 InputConstants.UNKNOWN.getValue(),
